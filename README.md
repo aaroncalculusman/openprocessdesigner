@@ -14,6 +14,7 @@ Currently we are trying to think of a better name. Candidates include:
 Contributions are welcome, although there's not much to contribute to yet. Please fork this repository to your own account, then submit a pull request with your commits.
 
 If you're new to git like me, you fork the repository to your own account, then clone the repository to your local machine. Then you create a new branch and add your feature or whatever. When you're done, push the branch to the origin (GitHub) and submit a pull request. Here's how to do it:
+
 1. Create an account on GitHub.
 2. Fork this repository. (This creates a copy of Open Process Designer on your own GitHub account.)
 3. Clone your repository to your local machine. On Linux, use:
@@ -52,6 +53,7 @@ Branch my-new-feature set up to track remote branch my-new-feature from origin.
 ```
 
 On subsequent commits on the `my-new-feature` branch, you only need to use `git push` since you've already set the upstream branch. When you're all done with `my-new-feature`, and you've pushed all the commits to your account, go to your repository on GitHub and:
+
 1. Click "Compare & pull request".
 2. Write a comment or two, then click "Create pull request".
 3. When the pull request is merged, your edits will be part of Open Process Designer!
