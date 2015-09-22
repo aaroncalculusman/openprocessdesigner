@@ -28,8 +28,14 @@ function opd(canvas) {
   window.addEventListener("wheel", function(event) {
     if(event.ctrlKey) {
       event.preventDefault();
+      // After the scroll, the scaled mouse position should be the same as it was before the scroll.
+      var transPt = stage.globalToLocal(event.x, event.y);
       stage.scaleX /= Math.exp(event.deltaY/500);
       stage.scaleY /= Math.exp(event.deltaY/500);
+      var movedPt = stage.localToGlobal(transPt.x, transPt.y);
+      // Move the stage so that movedPt would be at the same screen location as event.x,y
+      stage.x += event.x - movedPt.x;
+      stage.y += event.y - movedPt.y;
     }
     else {
       stage.x -= event.deltaX;
